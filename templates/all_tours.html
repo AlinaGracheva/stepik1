@@ -3,11 +3,7 @@
 {% block container %}
 
   <main class="container mt-3">
-    <h1 class="display-5 mt-4">Летим {{ departures[departure] }}</h1>
-    <p class="mb-4">Найдено {{ tours|length }} {{ t }}, от {{ (tours.values()|min(attribute="price")).price }} до {{ (tours.values()|max(attribute="price")).price }}
-      и от {{ (tours.values()|min(attribute="nights")).nights }} до {{ (tours.values()|max(attribute="nights")).nights }} ночей</p>
-    <!-- CARDS -->
-    <div class="row mt-5">
+      <div class="row mt-5">
       {% for key, val in tours.items() %}
       <div class="col-4">
         <div class="card mb-4">
